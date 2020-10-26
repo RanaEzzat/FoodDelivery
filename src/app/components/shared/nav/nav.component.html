@@ -1,0 +1,65 @@
+<!--<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal"><app-header></app-header></h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a *ngIf="loggedin()" class="p-2 text-dark" [routerLink]="['/shop']">Menu</a>
+      <a *ngIf="!loggedin()" class="btn btn-primary" [routerLink]="['/userregister']">Register</a>
+      <a *ngIf="!loggedin()" class="btn btn-outline-secondary" [routerLink]="['/userlogin']">Login</a>
+      <a *ngIf="loggedin()"class="btn btn-primary" (click)="Logout()">Logout</a>
+    </nav>
+
+  </div>
+-->
+
+<!--
+<div>
+<nav class="navbar navbar-expand-md navbar-dark danger-color fixed-top bg-dark">
+    <a class="navbar-brand" href="#"><app-header></app-header></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a *ngIf="loggedin()" class="dropdown-item" [routerLink]="['/shop']">Menu</a>
+        </li>
+        <li class="nav-item">
+            <a *ngIf="!loggedin()" class="dropdown-item" [routerLink]="['/userregister']">Register</a>
+        </li>
+        <li class="nav-item">
+            <a *ngIf="!loggedin()" class="dropdown-item" [routerLink]="['/userlogin']">Login</a>
+        </li>
+        <li class="nav-item">
+            <a *ngIf="loggedin()" class="dropdown-item" (click)="Logout()">Logout</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  </div>
+-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" ><app-header></app-header></a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+        <li class="nav-item">
+            <a *ngIf="loggedin()" class="nav-link" [routerLink]="['/shop']">Menu </a>
+        </li>
+        <li class="nav-item">
+            <a *ngIf="!loggedin()" class="nav-link" [routerLink]="['/userregister']">Register</a>
+        </li>
+        <li class="nav-item">
+            <a *ngIf="!loggedin()" class="nav-link" [routerLink]="['/userlogin']">Login</a>
+        </li>
+        <li class="nav-item">
+            <a *ngIf="loggedin()" class="nav-link" (click)="Logout()" [routerLink]="['']">Logout</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>

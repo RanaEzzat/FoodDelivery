@@ -1,0 +1,123 @@
+
+<div class="row"><br><br></div>
+
+  <div class="row">
+    <div class="col-6 m-auto">
+
+
+      <div class="d-flex justify-content-center align-items-center login-container">
+        <form [formGroup]="registerationForm" class="login-form" (ngSubmit)="onSubmit()">
+          <div class="form-group col-12">
+              <input placeholder="Name" type="text" class="form-control rounded-pill form-control-lg" formControlName="name">
+              <span *ngIf="!name.valid && name.touched">
+                <small class="error-block">Please enter your name.</small>
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+              <input placeholder="Username" type="text" class="form-control rounded-pill form-control-lg" formControlName="username">
+              <span *ngIf="!username.valid && username.touched" class="error-block">
+                  <span *ngIf="username.errors['required']">
+                    Please enter a username.
+                  </span>
+                  <span *ngIf="username.errors.minlength">
+                    Username length should not be less than 8 characters.
+                  </span>
+                </span>
+          </div>
+
+          <div class="form-group col-12">
+            <input placeholder="Email" type="text" class="form-control rounded-pill form-control-lg" formControlName="email">
+            <span *ngIf="!email.valid && email.touched" class="error-block">
+                <span *ngIf="email.hasError('required')">
+                  Please enter an email.
+                </span>
+                <span *ngIf="email.hasError('email')">
+                  Please enter a valid email.
+                </span>
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+            <input placeholder="Password" type="password" class="form-control rounded-pill form-control-lg" formControlName="password">
+            <span *ngIf="!password.valid && password.touched" class="error-block">
+                <span *ngIf="password.errors['required']">
+                  Please enter a password.
+                </span>
+                <span *ngIf="password.errors.minlength">
+                  Password length should not be less than 8 characters.
+                </span>
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+            <input placeholder="Confirm Password" type="password" class="form-control rounded-pill form-control-lg" formControlName="confirmpassword">
+            <span  *ngIf="!confirmpassword.valid && confirmpassword.touched" class="error-block">
+                <span *ngIf="confirmpassword.hasError('required')" class="error-block">
+                  Please confirm your password.
+                </span>
+              </span>
+                <span *ngIf="registerationForm.hasError('notmatched') && confirmpassword.valid" class="error-block">
+                  Passwords do not match.
+                </span>
+          </div>
+
+          <div class="form-group col-12">
+            <input placeholder="Mobile Number" type="number" class="form-control rounded-pill form-control-lg" formControlName="mobile">
+            <span *ngIf="!mobile.valid && mobile.touched" class="error-block">
+                <span *ngIf="mobile.errors['required']">
+                  Please enter your phone number.
+                </span>
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+              <input placeholder="Address" type="text" class="form-control rounded-pill form-control-lg" formControlName="address">
+              <span *ngIf="!address.valid && address.touched" class="error-block">
+                  <span *ngIf="address.errors['required']">
+                    Please enter your address.
+                  </span>
+                  <span *ngIf="address.errors.maxlength">
+                     Your address cannot exceed 20 characters.
+                  </span>
+                </span>
+          </div>
+
+          <div class="form-group col-12">
+            <button type="submit"  style="background:rgb(250, 176, 38)" class="btn rounded-pill btn-custom btn-block text-uppercase">Register</button>
+            <button type="reset" class="btn rounded-pill btn-custom btn-block text-uppercase" style="background-color: rgb(233, 91, 91)">Cancel</button>
+          </div>
+        </form>
+    </div>
+    </div>
+  </div>
+
+
+
+  <!--
+  <div class="row" >
+      <div class="col">
+
+          <img class="centeredimage" src="https://www.pngkit.com/png/full/428-4282941_food-delivery-solution-food-delivery.png" style="width:30%;height:60%" alt="foodlogo" >
+
+    <div class="d-flex justify-content-center align-items-center login-container">
+        <form class="login-form" #loginForm='ngForm' (ngSubmit)="onLogin(loginForm)">
+            <div class="form-group">
+                <input type="text" ngModel name="username" id="username" class="form-control rounded-pill form-control-lg" required placeholder="Username" required>
+            </div>
+
+            <div class="form-group">
+                <input type="password" ngModel name="password" id="password" class="form-control rounded-pill form-control-lg" required  placeholder="Password" required>
+            </div>
+
+            <div class="forgot-link form-group d-flex justify-content-between align-items-center">
+
+
+  </div>
+            <button [disabled]="!loginForm.valid" type="submit" class="btn rounded-pill btn-custom btn-block text-uppercase">Login</button>
+
+        </form>
+      </div>
+      </div>
+      </div>
+    -->

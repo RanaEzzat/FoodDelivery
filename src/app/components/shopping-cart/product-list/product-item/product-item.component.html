@@ -1,0 +1,38 @@
+
+
+
+
+
+
+<div class="row"><br></div>
+
+    <!-- Card -->
+<div class="card booking-card" style="border-radius: 5%;" >
+
+    <!-- Card image -->
+    <div class="view overlay">
+      <img class="card-img-top img-responsive" [src]="productItem.image" style="border-radius: 5%; max-width:350px; height:250px" alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!-- Card content -->
+    <div class="card-body">
+
+      <!-- Title -->
+      <h4 class="card-title font-weight-bold">{{ productItem.name }} </h4>
+      <!-- Data -->
+
+      <p class="mb-2">{{ productItem.price | currency:'EGP'}}</p>
+      <!-- Text -->
+      <p class="card-text"><strong>{{ productItem.calories }}</strong> calories<br>{{productItem.description}}</p>
+      <hr class="my-4">
+
+      <!-- Button -->
+      <a (click)="purchase()" style="background:rgb(250, 176, 38)" class="btn rounded-pill btn-custom btn-block text-uppercase"><h6 style="padding-top: 8px">Add to Cart</h6></a>
+    </div>
+
+  </div>
+  <!-- Card -->
+  <div class="row"><br></div>

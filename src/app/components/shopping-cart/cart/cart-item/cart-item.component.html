@@ -1,0 +1,11 @@
+
+    <div class="row">
+      <h6 class="my-0"> <span>{{ cartItem.productName }}</span></h6>
+    </div>
+      <div class="row">
+      <small class="text-muted">Quantity: {{ cartItem.quantity }} </small>
+    </div>
+    <div class="row">
+    <span class="text-muted"><strong>{{ (cartItem.quantity * cartItem.price) | currency:'EGP' }}</strong></span>
+  </div>
+
